@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toggle_button_widget"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:minHeight="40dp"
+    android:minWidth="40dp"
+    android:gravity="center"
+    android:focusable="true"
+    android:orientation="vertical" >
+
+    <Button 
+        android:id="@+id/toggle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/toggle_description"
+        android:background="@drawable/ic_launcher"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+    
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text" 
+        android:textColor="#FEFEFE"
+        android:textSize="12dp"
+        android:shadowColor="#000000"
+		android:shadowDx="1.5"
+		android:shadowDy="1.5"
+		android:shadowRadius="1"/>
+
+</LinearLayout>
