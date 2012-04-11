@@ -37,7 +37,7 @@ public class CarModeWidget extends AppWidgetProvider {
 	 */
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		Log.d(TAG,"Intent recv'd: " + intent);
+		Log.d(TAG,"Intent recv'd: URI:" + intent.toURI());
 		
 		if(intent.getAction().equals(CAR_MODE_BUTTON_PRESS)) {
 			toggleCarMode(context);
@@ -111,6 +111,9 @@ public class CarModeWidget extends AppWidgetProvider {
 			
 			// Set the pending intent
 			views.setOnClickPendingIntent(R.id.toggle_button, pendingIntent);
+			
+			Intent nfcI = new Intent(context,CarModeWidget.class);
+			nfcI.setAction("DockMode");
 
 			// Tell myself about it
 			Log.d(TAG,"Finished building update");
